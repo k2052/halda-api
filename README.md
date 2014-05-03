@@ -1,0 +1,1 @@
+Halda is a bookmarking app. This repo contains the API backend. 
