@@ -1,6 +1,14 @@
 module Halda
 	module Helpers
 		module Auth
+			def authenticated?
+		    error!('Unauthorized', 401) unless current_account
+			end
+
+			def session
+				env['rack.session']
+			end
+
 	    ##
 	    # Returns the current_account, it's an instance of Account model.
 	    #
@@ -15,12 +23,12 @@ module Halda
 		  #     set_current_account(Account.authenticate(params[:email], params[:password])
 		  #
 		  def set_current_account(account=nil)
-		    session[APP.config.session_id] = account ? account.id : nil
+		    session[Halda.config['session_id']] = account ? account.id : nil
 		    @current_account = account
 		  end
 
 	    def login_from_session
-	      Account.find_by_id(session[APP.config.session_id])
+	      Account.find_by_id(session[Halda.config['session_id']])
 	    end
 		end
 	end

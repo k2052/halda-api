@@ -7,4 +7,7 @@ FactoryGirl.define do
     name { Faker::Name.name }
     role 'test'
   end
+
+  factory :account_with_feed, :parent => :account do
+  end
 end

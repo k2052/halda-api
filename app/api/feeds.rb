@@ -4,6 +4,10 @@ module Halda
 		  version 'v1', using: :header, vendor: 'halda'
 		  format :json
 
+		  before do
+		  	authenticated?
+		  end
+
 			get ":account/feed" do
 				{
 					feed: current_account.feed().serializable_hash(),
