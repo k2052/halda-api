@@ -27,7 +27,7 @@ end
 
 $LOAD_PATH.unshift(current_dir)
 
-['app/helpers', 'app/middleware', 'app/models', 'app/api' ].each do |path|
+['app/commands', 'app/helpers', 'app/middleware', 'app/models', 'app/api' ].each do |path|
   Dir[File.expand_path("../#{path}/*.rb", __FILE__)].each do |f|
     require f
   end

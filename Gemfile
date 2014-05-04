@@ -11,6 +11,9 @@ gem 'bson_ext', '~> 1.10.0', :require => 'mongo'
 gem 'mongo_mapper', '~> 0.13.0', :require => 'mongo_mapper'
 gem 'omniauth-identity', require: 'omniauth-identity'
 gem 'mongomapper_ext', "~> 0.5.0", git: 'git://github.com/k2052/mongomapper_ext.git', require: 'mongomapper_ext'
+gem 'imperator'
+gem 'resque-status'
+gem 'metainspector', require: 'metainspector'
 
 group :development do
   gem 'rerun'
