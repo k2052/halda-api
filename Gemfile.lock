@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/k2052/mongomapper_ext.git
+  revision: 22d450e18f6bae3c2bc2b7d2dc41417ff73b05fd
+  specs:
+    mongomapper_ext (0.5.0)
+      mongo_mapper (~> 0.8)
+      uuidtools (>= 2.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -15,6 +23,9 @@ GEM
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
+    bcrypt (3.1.7)
+    bcrypt-ruby (3.1.5)
+      bcrypt (>= 3.1.3)
     bson (1.10.0)
     bson_ext (1.10.0)
       bson (~> 1.10.0)
@@ -30,6 +41,7 @@ GEM
     equalizer (0.0.9)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
+    ffaker (1.24.0)
     ffi (1.9.3)
     formatador (0.2.4)
     grape (0.7.0)
@@ -68,6 +80,12 @@ GEM
       plucky (~> 0.6.5)
     multi_json (1.9.3)
     multi_xml (0.5.5)
+    omniauth (1.2.1)
+      hashie (>= 1.2, < 3)
+      rack (~> 1.0)
+    omniauth-identity (1.1.1)
+      bcrypt-ruby (~> 3.0)
+      omniauth (~> 1.0)
     plucky (0.6.6)
       mongo (~> 1.5)
     pry (0.9.12.6)
@@ -106,6 +124,7 @@ GEM
     thread_safe (0.3.3)
     tzinfo (1.1.0)
       thread_safe (~> 0.1)
+    uuidtools (2.1.4)
     vcr (2.9.0)
     virtus (1.0.2)
       axiom-types (~> 0.1)
@@ -122,10 +141,13 @@ PLATFORMS
 DEPENDENCIES
   bson_ext (~> 1.10.0)
   factory_girl
+  ffaker
   grape (~> 0.7.0)
   guard
   guard-rspec
   mongo_mapper (~> 0.13.0)
+  mongomapper_ext (~> 0.5.0)!
+  omniauth-identity
   puma
   rack-ssl-enforcer
   rack-test

@@ -1,3 +1,5 @@
-require File.expand_path('../app', __FILE__)
+require File.expand_path('application', __FILE__)
 
-run App
+instance = Halda.App.instance
+
+run instance

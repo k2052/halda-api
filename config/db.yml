@@ -1,7 +1,0 @@
-development:
-	hostname: '127.0.0.1'
-	database: 'dev_halda'
-
-development:
-	hostname: '127.0.0.1'
-	database: 'test_halda'
