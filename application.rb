@@ -6,13 +6,13 @@ module Halda
 	def self.config=(config)
 		@config = config
 	end
-  
+
   def self.env
   	@env
   end
 
 	def self.env=(env)
-		@env = env
+		@env = env.to_sym
 	end
 end
 

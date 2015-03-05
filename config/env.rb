@@ -11,4 +11,3 @@ require specific_environment if File.exists? specific_environment
 Dir[File.expand_path("../initializers/*.rb", __FILE__)].each do |f|
   require f
 end
-

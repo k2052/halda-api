@@ -9,5 +9,6 @@ FactoryGirl.define do
   end
 
   factory :account_with_feed, :parent => :account do
+    feed { FactoryGirl.create(:feed) }
   end
 end

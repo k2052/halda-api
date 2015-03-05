@@ -13,6 +13,7 @@ module Halda
 	    # Returns the current_account, it's an instance of Account model.
 	    #
 	    def current_account
+				@current_account ||= login_from_api_token
 	      @current_account ||= login_from_session
 	    end
 
@@ -30,6 +31,11 @@ module Halda
 	    def login_from_session
 	      Account.find_by_id(session[Halda.config['session_id']])
 	    end
+
+			def login_from_api_token
+				return unless params[:api_token] or request.headers['X-Token']
+				Account.find_by_api_token(params[:api_token] || request.headers['X-Token'])
+			end
 		end
 	end
 end
